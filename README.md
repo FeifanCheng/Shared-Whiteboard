@@ -62,4 +62,4 @@ java JoinWhiteBoard <serverIPAddress> <serverPort> username
 
  When the manager quits, the application will be terminated. All the peers will get a message notifying them.
 
-cite from "Unimelb distributed system assignment 2"
+# cite from "Unimelb distributed system assignment 2"
