@@ -21,5 +21,43 @@ Sharedwhiteboardsallowmultipleuserstodrawsimultaneouslyona canvas. There are mul
 3. Allow the manager to kick out a certain peer/user
 
 Use Server.jar to launch the Server
+
 Use CreateWhiteBoard.jar to launch the manager client
+
 Use JoinWhiteBoard.jar to launch the other clients
+
+## Guidelines on Usage/Operation
+Users must provide a username when joining the whiteboard. There should be a way of uniquely identifying users, either by enforcing unique usernames or automatically generating a unique identifier and associating it with each username.
+
+ All the users should see the same image of the whiteboard and should have the privilege of doing all the drawing operations.
+
+ When displaying a whiteboard, the client user interface should show the usernames of other users who are currently editing the same whiteboard.
+
+ Clients may connect and disconnect at any time. When a new client joins the system the client should obtain the current state of the whiteboard so that the same objects are always displayed to every active client.
+
+ Only the manager of the whiteboard should be allowed to create a new whiteboard, open a previously saved one, save the current one, and close the application.
+
+ Users should be able to work on a drawing together in real time, without appreciable delays between making and observing edits.
+
+## Proposed Startup/Operational Model
+
+ Thefirstusercreatesawhiteboardandbecomesthewhiteboard’s manager
+ ```
+javaCreateWhiteBoard<serverIPAddress><serverPort>username
+```
+ Other users can ask to join the whiteboard application any time by
+inputting server’s IP address and port number
+```
+java JoinWhiteBoard <serverIPAddress> <serverPort> username
+```
+ A notification will be delivered to the manager if any peer wants to join. The peer can join in only after the manager approves
+
+ A dialog showing “someone wants to share your whiteboard”.
+
+ An online peer list should be maintained and displayed
+
+ Allthepeerswillseetheidenticalimageofthewhiteboard,aswellas have the privilege of doing all the operations.
+
+ Onlinepeerscanchoosetoleavewhenevertheywant.Themanager can kick someone out at any time.
+
+ When the manager quits, the application will be terminated. All the peers will get a message notifying them.
