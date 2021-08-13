@@ -1,5 +1,5 @@
 # Shared-Whiteboard
-Sharedwhiteboardsallowmultipleuserstodrawsimultaneouslyona canvas. There are multiple examples found on the Internet that support a range of features such as freehand drawing with the mouse, drawing lines and shapes such as circles and squares that can be moved and resized, and inserting text.
+Shared white boards allowmultipleuserstodrawsimultaneouslyona canvas. There are multiple examples found on the Internet that support a range of features such as freehand drawing with the mouse, drawing lines and shapes such as circles and squares that can be moved and resized, and inserting text.
 ## Whiteboard – Multiuser system
  Multiple users can draw on a shared interactive canvas.
 
@@ -61,3 +61,5 @@ java JoinWhiteBoard <serverIPAddress> <serverPort> username
  Onlinepeerscanchoosetoleavewhenevertheywant.Themanager can kick someone out at any time.
 
  When the manager quits, the application will be terminated. All the peers will get a message notifying them.
+
+cite from "Unimelb distributed system assignment 2"
